@@ -1,0 +1,47 @@
+name: Compress legacy blog images
+
+on:
+  push:
+    branches: ["master"]
+    paths:
+      - "scripts/optimize_images.py"
+      - ".github/workflows/compress-images.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout full blog repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Install image encoder
+        run: python3 -m pip install --user "Pillow>=10,<13"
+
+      - name: Compress JPG files and convert large article PNGs
+        run: python3 scripts/optimize_images.py
+
+      - name: Create optimization branch and push assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No image changes passed compression thresholds."
+            exit 0
+          fi
+          branch="perf/compressed-blog-images-${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git commit -m "perf: optimize blog images and localize legacy image links"
+          git push --set-upstream origin "$branch"
+          echo "Image optimization branch: $branch"
+          echo "Open a PR and merge this branch to publish optimized files."
