@@ -1,0 +1,63 @@
+/* Colin Jay Blog — independent editorial redesign, 2026. */
+:root{--cj-ink:#202632;--cj-muted:#6c727a;--cj-line:#e6e7e7;--cj-paper:#f8f9f8;--cj-brand:#bd8158;--cj-deep:#172331}
+html{scroll-behavior:smooth}
+body{background:var(--cj-paper)!important;color:var(--cj-ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif!important;-webkit-font-smoothing:antialiased}
+body a{transition:color .2s ease,background .2s ease,border-color .2s ease}
+body a:hover,body a:focus{color:#bd8158}
+::selection{background:#dbc6b5;color:#18232d}
+.navbar-custom{background:rgba(19,30,42,.91)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.10)!important;box-shadow:0 8px 35px rgba(0,0,0,.07)}
+.navbar-custom .navbar-brand{font-weight:700!important;letter-spacing:.05em;font-size:18px!important;text-transform:none;color:#fff!important}
+.navbar-custom .navbar-nav>li>a{font-weight:600!important;letter-spacing:.08em;font-size:11px!important;color:rgba(255,255,255,.85)!important;text-transform:uppercase}
+.navbar-custom .navbar-nav>li>a:hover,.navbar-custom .navbar-nav>li>a:focus{color:#e6bd98!important}
+.navbar-custom .navbar-toggle .icon-bar{background-color:#fff!important}
+header.intro-header{min-height:580px;background-color:#192637!important;background-position:center 44%!important;background-size:cover!important;overflow:hidden;position:relative}
+header.intro-header:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(14,24,36,.83),rgba(20,28,35,.36) 80%),linear-gradient(0deg,rgba(14,24,36,.65),transparent 55%)}
+header.intro-header:before{content:"";position:absolute;width:500px;height:500px;right:-125px;top:105px;border:1px solid rgba(255,255,255,.10);border-radius:50%;box-shadow:0 0 0 65px rgba(255,255,255,.025),0 0 0 130px rgba(255,255,255,.018);z-index:1;pointer-events:none}
+header.intro-header #signature{position:relative;z-index:2;min-height:580px;display:flex;align-items:center;background-image:none!important}
+header.intro-header #signature>.container{width:100%}
+header.intro-header .site-heading{padding:135px 0 105px!important;text-align:left!important}
+header.intro-header .site-heading:before{content:"WRITING / ENGINEERING / IDEAS";display:block;margin-bottom:26px;font-size:11px;font-weight:700;letter-spacing:.35em;color:#f1c69c}
+header.intro-header .site-heading h1{font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(60px,9vw,116px)!important;letter-spacing:-.075em!important;line-height:.96!important;font-weight:400!important;color:#fff!important;text-shadow:0 9px 35px rgba(0,0,0,.25)}
+header.intro-header .site-heading .subheading{display:block;margin-top:26px;max-width:600px;font-size:clamp(15px,1.7vw,19px)!important;line-height:1.7!important;color:#d3dce1!important;font-weight:400!important;letter-spacing:.01em}
+header.intro-header .waveWrapper{opacity:.18;z-index:2;pointer-events:none}
+.cj-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:31px}
+.cj-hero-actions a{border-radius:6px;text-decoration:none!important;display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;font-weight:650;letter-spacing:.03em;font-size:12px}
+.cj-hero-actions a:first-child{background:#f2cba7;border:1px solid #f2cba7;color:#162331}
+.cj-hero-actions a:first-child:hover{background:#f8ddc4}
+.cj-hero-actions a:last-child{color:#fff;border:1px solid rgba(255,255,255,.42);background:rgba(255,255,255,.05)}
+.cj-hero-actions a:last-child:hover{background:rgba(255,255,255,.12)}
+.cj-intro{padding:63px 20px 38px;margin:0 auto;text-align:center;max-width:950px}
+.cj-kicker{display:block;font-size:10px;letter-spacing:.35em;color:#b9794e;font-weight:750}
+.cj-intro h2{margin:15px 0 13px;color:#1c2935;font:normal clamp(31px,4vw,48px)/1.2 Georgia,"Times New Roman",serif;letter-spacing:-.035em}
+.cj-intro p{font-size:14px;color:#67727b;line-height:1.8;max-width:640px;margin:auto}
+body>.container,body>div.container{max-width:1200px}
+.post-container{padding-bottom:68px}
+.post-container .post-preview{border:1px solid var(--cj-line);border-radius:15px;background:#fff;padding:30px 32px 25px;margin:0 0 20px;box-shadow:0 8px 32px rgba(24,44,61,.025);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.post-container .post-preview:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(24,44,61,.08);border-color:#d9cabd}
+.post-container .post-preview a{text-decoration:none}
+.post-container .post-preview .post-title{font-size:clamp(21px,2.15vw,27px)!important;line-height:1.5!important;letter-spacing:-.025em;color:#1c2b38!important;font-weight:700!important;margin:2px 0 12px!important}
+.post-container .post-preview a:hover .post-title{color:#ae754f!important}
+.post-container .post-preview .post-subtitle:empty{display:none}
+.post-container .post-content-preview{font-size:13px;line-height:1.95;color:#68737c!important;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.post-container .post-meta{margin:17px 0 11px!important;color:#85909a!important;text-transform:none!important;font-size:11px!important;letter-spacing:.04em}
+.post-container>.post-preview+.post-preview{margin-top:0}
+.post-container>hr{display:none}
+.post-container .tags a,.sidebar-container .tags a{display:inline-block;background:#f0f3f4;color:#52606a!important;border:1px solid #e7ebed!important;border-radius:50px;font-weight:600;font-size:11px!important;padding:5px 12px!important;line-height:1.5;box-shadow:none!important;margin:4px 5px 4px 0}
+.post-container .tags a:hover,.sidebar-container .tags a:hover{background:#f4e6db;color:#9c633f!important;border-color:#e2c7b1!important}
+.sidebar-container{padding-top:4px}
+.sidebar-container h5{font-size:12px!important;letter-spacing:.15em!important;color:#1d2d39!important;font-weight:750!important;margin-bottom:16px}
+.sidebar-container section,.sidebar-container #site_search{background:#fff;border:1px solid #e6e7e7;border-radius:14px;padding:22px;margin-bottom:18px}
+.sidebar-container #site_search input{border-radius:8px!important;border:1px solid #e1e5e9!important;box-shadow:none!important;padding:12px!important;height:45px!important;background:#fafbfc!important;color:#263441!important}
+.sidebar-container hr{display:none}
+.sidebar-container .short-about img{border-radius:50%;width:95px;height:95px;object-fit:cover;border:4px solid #f1f4f5}
+.sidebar-container .short-about p{font-size:13px;line-height:1.75;color:#68737c}
+.sidebar-container .fa-stack{color:#293c4c}
+.pager>li>a,.pager>li>span{border-radius:8px!important;border:1px solid #cdd5d8!important;background:#fff!important;color:#263947!important;padding:12px 22px!important;font-size:12px!important;font-weight:700;letter-spacing:.03em}
+.pager>li>a:hover{background:#263947!important;border-color:#263947!important;color:#fff!important}
+footer{background:#182735!important;color:#c6d0d8!important;margin-top:36px!important}
+footer .copyright,footer .copyright a{color:#b8c4cc!important}
+footer a:hover{color:#f0caaa!important}
+@media(min-width:992px){.post-container{padding-right:21px}.sidebar-container{position:sticky;top:78px}}
+@media(max-width:991px){header.intro-header,header.intro-header #signature{min-height:510px}.sidebar-container{padding-bottom:40px}.navbar-custom .navbar-collapse{background:rgba(19,30,42,.98)!important}}
+@media(max-width:767px){header.intro-header,header.intro-header #signature{min-height:495px}header.intro-header .site-heading{padding:152px 6px 76px!important}header.intro-header .site-heading h1{font-size:64px!important}header.intro-header:before{width:280px;height:280px;right:-130px}header.intro-header .site-heading:before{font-size:9px;letter-spacing:.23em}.cj-intro{padding:54px 22px 27px}.post-container .post-preview{padding:24px 21px 19px;margin-bottom:15px;border-radius:12px}.post-container .post-preview .post-title{font-size:20px!important}.post-container .post-content-preview{font-size:12px}.sidebar-container section,.sidebar-container #site_search{padding:18px}.navbar-custom .navbar-brand{color:white!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
