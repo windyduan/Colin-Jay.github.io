@@ -281,14 +281,14 @@
 <p>阅读以某一种语言（源代码）编写的程序，并把该程序翻译成为一个等价的、用另一种语言（目标语言）编写的程序。</p>
 <p><strong>解释器</strong></p>
 <p>另一种常见的语言处理器，并不通过翻译的方式生成目标程序，直接利用用户提供的输入执行源程序中指定的操作。</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/1.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/1.png" alt=""></p>
 <p>预处理器：一个源程序可能被分割成多个模块，并存放于独立的文件中，把源程序聚合在一起的任务有时会由一个被成为预处理器的程序独立完成。</p>
 <p>汇编器：对编译器产生的汇编语言程序进行处理，并生成可重定位的机器代码。</p>
 <p>链接器/加载器：一个文件中的代码可能指向另一个文件中的位置，而链接器能够解决外部内存地址的问题。最后，加载器把所有的可执行目标文件放到内存中执行。</p>
 <h3 id="1-2-一个编译器的结构"><a href="#1-2-一个编译器的结构" class="headerlink" title="1.2 一个编译器的结构"></a>1.2 一个编译器的结构</h3><p>编译器的两个组成部分：分析部分和综合部分。</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/2.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/2.webp" alt=""></p>
 <p>一个编译器的各个步骤：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/3.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/3.png" alt=""></p>
 <ul>
 <li>词法分析</li>
 </ul>
@@ -318,7 +318,7 @@
 <ul>
 <li>符号表管理</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/5.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/5.webp" alt=""></p>
 <ul>
 <li><p>将多个步骤组合成趟</p>
 </li>
@@ -326,8 +326,8 @@
 </li>
 </ul>
 <p>一个赋值语句的翻译：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/4.png" alt=""></p>
-<h2 id="第二章-一个简单的语法制导翻译器"><a href="#第二章-一个简单的语法制导翻译器" class="headerlink" title="第二章 一个简单的语法制导翻译器"></a>第二章 一个简单的语法制导翻译器</h2><h3 id="2-7-符号表"><a href="#2-7-符号表" class="headerlink" title="2.7 符号表"></a>2.7 符号表</h3><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/6.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/4.png" alt=""></p>
+<h2 id="第二章-一个简单的语法制导翻译器"><a href="#第二章-一个简单的语法制导翻译器" class="headerlink" title="第二章 一个简单的语法制导翻译器"></a>第二章 一个简单的语法制导翻译器</h2><h3 id="2-7-符号表"><a href="#2-7-符号表" class="headerlink" title="2.7 符号表"></a>2.7 符号表</h3><p><img src="/2020/05/11/CompilerPrinciple/6.webp" alt=""></p>
 <h4 id="2-7-1-为每个作用域设置一个符号表"><a href="#2-7-1-为每个作用域设置一个符号表" class="headerlink" title="2.7.1 为每个作用域设置一个符号表"></a>2.7.1 为每个作用域设置一个符号表</h4><p><strong>最近嵌套规则</strong></p>
 <p>一个标识符x在最近声明x的作用域中，也就是说，从x出现的块开始，从内向外检查各个块时找到的第一个对x的声明。</p>
 <p><strong>符号表支持的三种操作：</strong></p>
@@ -336,10 +336,10 @@
 <li>在当前表中加入一个新的条目（键-值对）</li>
 <li>得到一个标识符的条目</li>
 </ul>
-<h4 id="2-7-2-符号表的使用"><a href="#2-7-2-符号表的使用" class="headerlink" title="2.7.2 符号表的使用"></a>2.7.2 符号表的使用</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/7.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/8.png" alt=""></p>
+<h4 id="2-7-2-符号表的使用"><a href="#2-7-2-符号表的使用" class="headerlink" title="2.7.2 符号表的使用"></a>2.7.2 符号表的使用</h4><p><img src="/2020/05/11/CompilerPrinciple/7.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/8.webp" alt=""></p>
 <h2 id="第三章-词法分析"><a href="#第三章-词法分析" class="headerlink" title="第三章 词法分析"></a>第三章 词法分析</h2><h3 id="3-1-词法分析器的作用"><a href="#3-1-词法分析器的作用" class="headerlink" title="3.1  词法分析器的作用"></a>3.1  词法分析器的作用</h3><p>词法分析是编译的第一阶段。词法分析器的主要任务是读入源程序的输入字符、将它们组成词素，生成并输出一个词法单元序列，每个词法单元序列对应于一个词素。</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/9.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/9.webp" alt=""></p>
 <p>词法分析器在编译器中负责读取源程序，因此还会完成一些识别词素之外的其他任务。</p>
 <ul>
 <li>任务一：过滤源程序中的注释和空白</li>
@@ -356,49 +356,49 @@
 <li>提高编译器的效率</li>
 <li>增强编译器的可移植性</li>
 </ul>
-<h4 id="3-1-2-词法单元、模式和词素"><a href="#3-1-2-词法单元、模式和词素" class="headerlink" title="3.1.2 词法单元、模式和词素"></a>3.1.2 词法单元、模式和词素</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/10.png" alt=""></p>
+<h4 id="3-1-2-词法单元、模式和词素"><a href="#3-1-2-词法单元、模式和词素" class="headerlink" title="3.1.2 词法单元、模式和词素"></a>3.1.2 词法单元、模式和词素</h4><p><img src="/2020/05/11/CompilerPrinciple/10.webp" alt=""></p>
 <h4 id="3-1-3-词法单元的属性"><a href="#3-1-3-词法单元的属性" class="headerlink" title="3.1.3 词法单元的属性"></a>3.1.3 词法单元的属性</h4><p>一个标识符（id）的属性值是一个指向符号表中该标识符对应条目的指针。</p>
 <h4 id="3-1-4-词法错误"><a href="#3-1-4-词法错误" class="headerlink" title="3.1.4 词法错误"></a>3.1.4 词法错误</h4><p>“恐慌模式”恢复：从剩余的输入中不断删除字符，直到词法分析器能够在剩余输入的开头发现一个正确的词法单元为止。</p>
 <p>其他错误恢复动作：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/11.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/11.png" alt=""></p>
 <h3 id="3-2-输入缓冲"><a href="#3-2-输入缓冲" class="headerlink" title="3.2 输入缓冲"></a>3.2 输入缓冲</h3><p>加快源程序读入速度</p>
-<h4 id="3-2-1-缓冲区对"><a href="#3-2-1-缓冲区对" class="headerlink" title="3.2.1 缓冲区对"></a>3.2.1 缓冲区对</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/12.png" alt=""></p>
+<h4 id="3-2-1-缓冲区对"><a href="#3-2-1-缓冲区对" class="headerlink" title="3.2.1 缓冲区对"></a>3.2.1 缓冲区对</h4><p><img src="/2020/05/11/CompilerPrinciple/12.webp" alt=""></p>
 <h4 id="3-2-2-哨兵标记"><a href="#3-2-2-哨兵标记" class="headerlink" title="3.2.2 哨兵标记"></a>3.2.2 哨兵标记</h4><p>每次对于forward指针需要检查两步：是否到达缓冲区末尾；确定读入字符是什么。（eof只能代表缓冲区末尾）</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/13.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/13.webp" alt=""></p>
 <p>就是说，<strong>引入哨兵标记后每次只要检查forward指针的读入字符是什么即可。</strong></p>
 <h3 id="3-3-词法单元的规约"><a href="#3-3-词法单元的规约" class="headerlink" title="3.3 词法单元的规约"></a>3.3 词法单元的规约</h3><p>正则表达式是一种用来描述词素模式的重要表示方法。</p>
 <h4 id="3-3-1-串和语言"><a href="#3-3-1-串和语言" class="headerlink" title="3.3.1 串和语言"></a>3.3.1 串和语言</h4><p>字母表：一个有限的符号集合</p>
 <p>串：某个字母表中符号的一个有穷序列</p>
 <p>空串：长度为0的串，用ε表示</p>
 <p>语言：某个给定字母表上一个任意的可数的串集合</p>
-<h4 id="3-3-2-语言上的运算"><a href="#3-3-2-语言上的运算" class="headerlink" title="3.3.2 语言上的运算"></a>3.3.2 语言上的运算</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/14.png" alt=""></p>
+<h4 id="3-3-2-语言上的运算"><a href="#3-3-2-语言上的运算" class="headerlink" title="3.3.2 语言上的运算"></a>3.3.2 语言上的运算</h4><p><img src="/2020/05/11/CompilerPrinciple/14.webp" alt=""></p>
 <h4 id="3-3-3-正则表达式"><a href="#3-3-3-正则表达式" class="headerlink" title="3.3.3 正则表达式"></a>3.3.3 正则表达式</h4><p>letter_表示任一字母或下划线，digit表示数位（任一单个数字）</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/15.png" alt=""></p>
-<h4 id="3-3-4-正则定义"><a href="#3-3-4-正则定义" class="headerlink" title="3.3.4 正则定义"></a>3.3.4 正则定义</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/16.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/15.webp" alt=""></p>
+<h4 id="3-3-4-正则定义"><a href="#3-3-4-正则定义" class="headerlink" title="3.3.4 正则定义"></a>3.3.4 正则定义</h4><p><img src="/2020/05/11/CompilerPrinciple/16.webp" alt=""></p>
 <p>前面的d为后面的d铺垫，方便后面使用，从而达到最后的d可以用∑和前面的d表示</p>
 <h4 id="3-3-5-正则表达式的扩展"><a href="#3-3-5-正则表达式的扩展" class="headerlink" title="3.3.5 正则表达式的扩展"></a>3.3.5 正则表达式的扩展</h4><ul>
 <li>一个或多个实例：单目后缀运算符+</li>
 <li>零个或一个实例：单目后缀运算符?</li>
 <li>字符类：[ ]</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/17.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/17.png" alt=""></p>
 <h3 id="3-4-词法单元的识别"><a href="#3-4-词法单元的识别" class="headerlink" title="3.4 词法单元的识别"></a>3.4 词法单元的识别</h3><h4 id="3-4-1-状态转换图"><a href="#3-4-1-状态转换图" class="headerlink" title="3.4.1 状态转换图"></a>3.4.1 状态转换图</h4><ul>
 <li>圆圈或结点表示状态</li>
 <li>边表示从一个状态指向另一个状态</li>
 <li>边的标号包含了一个或多个符合，表示从某个状态经过某下个输入符合进入边指向的另一端状态</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/52.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/52.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/53.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/53.png" alt=""></p>
 <h4 id="3-4-2-保留字和标识符的识别"><a href="#3-4-2-保留字和标识符的识别" class="headerlink" title="3.4.2 保留字和标识符的识别"></a>3.4.2 保留字和标识符的识别</h4><p>我们可以使用两种方法来处理那些看起来像标识符的保留字：</p>
 <ul>
 <li>初始化时就将各个保留字填入符号表中</li>
 <li>为每个关键字建立单独的状态转换图</li>
 </ul>
-<h4 id="3-4-4-基于状态转换图的词法分析器的体系结构"><a href="#3-4-4-基于状态转换图的词法分析器的体系结构" class="headerlink" title="3.4.4 基于状态转换图的词法分析器的体系结构"></a>3.4.4 基于状态转换图的词法分析器的体系结构</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/54.png" alt=""></p>
+<h4 id="3-4-4-基于状态转换图的词法分析器的体系结构"><a href="#3-4-4-基于状态转换图的词法分析器的体系结构" class="headerlink" title="3.4.4 基于状态转换图的词法分析器的体系结构"></a>3.4.4 基于状态转换图的词法分析器的体系结构</h4><p><img src="/2020/05/11/CompilerPrinciple/54.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/55.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/56.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/55.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/56.webp" alt=""></p>
 <h3 id="3-6-有穷自动机"><a href="#3-6-有穷自动机" class="headerlink" title="3.6 有穷自动机"></a>3.6 有穷自动机</h3><p>Lex（词法分析器生成工具）将它的输入程序变成一个词法分析器转换的核心是被称为有穷自动机的表示方法。这些自动机在本质上是与状态转换图类似的图，但有如下几点不同：</p>
 <ul>
 <li>有穷自动机是识别器，它们只能对每个可能的输入串简单地回答“是”或“否”</li>
@@ -409,25 +409,25 @@
 </li>
 </ul>
 <p>确定的和不确定的有穷自动机能识别的语言的集合是相同的。事实上，这些语言的集合正好是能够用正则表达式描述的语言的集合。这个集合中的语言称为正则语言。</p>
-<h4 id="3-6-1-不确定的有穷自动机"><a href="#3-6-1-不确定的有穷自动机" class="headerlink" title="3.6.1 不确定的有穷自动机"></a>3.6.1 不确定的有穷自动机</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/57.png" alt=""></p>
+<h4 id="3-6-1-不确定的有穷自动机"><a href="#3-6-1-不确定的有穷自动机" class="headerlink" title="3.6.1 不确定的有穷自动机"></a>3.6.1 不确定的有穷自动机</h4><p><img src="/2020/05/11/CompilerPrinciple/57.webp" alt=""></p>
 <p>示例：</p>
 <p>状态0可以由a到达状态0或状态1</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/58.png" alt=""></p>
-<h4 id="3-6-2-转换表"><a href="#3-6-2-转换表" class="headerlink" title="3.6.2 转换表"></a>3.6.2 转换表</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/59.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/58.webp" alt=""></p>
+<h4 id="3-6-2-转换表"><a href="#3-6-2-转换表" class="headerlink" title="3.6.2 转换表"></a>3.6.2 转换表</h4><p><img src="/2020/05/11/CompilerPrinciple/59.png" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/60.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/60.png" alt=""></p>
 <h4 id="3-6-3-自动机中输入字符串的接受"><a href="#3-6-3-自动机中输入字符串的接受" class="headerlink" title="3.6.3 自动机中输入字符串的接受"></a>3.6.3 自动机中输入字符串的接受</h4><p>只要存在某条[其标号序列为某符号串的]路径能够从开始状态到达某个接受状态，NFA就接受这个串。</p>
 <p>路径中的ε标号将被忽略</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/61.png" alt=""></p>
-<h4 id="3-6-4-确定的有穷自动机"><a href="#3-6-4-确定的有穷自动机" class="headerlink" title="3.6.4 确定的有穷自动机"></a>3.6.4 确定的有穷自动机</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/62.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/61.webp" alt=""></p>
+<h4 id="3-6-4-确定的有穷自动机"><a href="#3-6-4-确定的有穷自动机" class="headerlink" title="3.6.4 确定的有穷自动机"></a>3.6.4 确定的有穷自动机</h4><p><img src="/2020/05/11/CompilerPrinciple/62.webp" alt=""></p>
 <p>DFA相比NFA，NFA的符号有空串ε且同一个符号可以由同个状态出发到达多个状态，DFA的符号没有空串符号ε且每个状态的每个符号的出边存在且唯一</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/63.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/63.png" alt=""></p>
 <h3 id="3-7-从正则表达式到自动机"><a href="#3-7-从正则表达式到自动机" class="headerlink" title="3.7 从正则表达式到自动机"></a>3.7 从正则表达式到自动机</h3><p>NFA对于一个输入符号可以选择不同的转换，它还可以执行输入ε上的转换，甚至可以选择是对ε或是对真实的输入符号执行转换，因此对NFA的模拟不如对DFA的模拟直接。于是，我们需要将一个NFA转换为一个识别相同语言的DFA。</p>
 <h4 id="3-7-1-从NFA到DFA的转换"><a href="#3-7-1-从NFA到DFA的转换" class="headerlink" title="3.7.1 从NFA到DFA的转换"></a>3.7.1 从NFA到DFA的转换</h4><p><strong>子集构造法</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/73.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/74.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/75.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/73.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/74.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/75.png" alt=""></p>
 <p>将NFA转换为DFA，通过子集构造法构造<strong>转换表Dtran</strong>得到DFA：</p>
 <ul>
 <li>Dtran各行：NFA状态集—DFA状态—DFA各个出边</li>
@@ -441,27 +441,27 @@
 <li>通过DFA的每个状态和其对应的出边即可画出DFA</li>
 </ul>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/76.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/77.png" alt=""></p>
-<h4 id="3-7-2-NFA的模拟"><a href="#3-7-2-NFA的模拟" class="headerlink" title="3.7.2 NFA的模拟"></a>3.7.2 NFA的模拟</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/64.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/76.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/77.png" alt=""></p>
+<h4 id="3-7-2-NFA的模拟"><a href="#3-7-2-NFA的模拟" class="headerlink" title="3.7.2 NFA的模拟"></a>3.7.2 NFA的模拟</h4><p><img src="/2020/05/11/CompilerPrinciple/64.webp" alt=""></p>
 <h4 id="3-7-3-NFA模拟的效率"><a href="#3-7-3-NFA模拟的效率" class="headerlink" title="3.7.3 NFA模拟的效率"></a>3.7.3 NFA模拟的效率</h4><p>算法总效率：O(k(n + m))</p>
 <h4 id="3-7-4-从正则表达式构造NFA"><a href="#3-7-4-从正则表达式构造NFA" class="headerlink" title="3.7.4 从正则表达式构造NFA"></a>3.7.4 从正则表达式构造NFA</h4><p>将正则表达式转化为一个NFA的<strong>McMaughton-Yamada-Thompson</strong>算法</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/68.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/68.png" alt=""></p>
 <p><strong>基本规则：</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/69.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/69.png" alt=""></p>
 <p><strong>归纳规则：</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/70.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/70.webp" alt=""></p>
 <p>将正则表达式转化为NFA，先画出由表达式构成的语法分析树，最小到每个表达式不能再划分。每个最小的表达式由基本规则构造出NFA，然后四种情况（并、连接、闭包、括号）根据归纳规则合成最终表达式的NFA。</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/71.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/72.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/71.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/72.png" alt=""></p>
 <h3 id="3-9-基于DFA的模式匹配器的优化"><a href="#3-9-基于DFA的模式匹配器的优化" class="headerlink" title="3.9 基于DFA的模式匹配器的优化"></a>3.9 基于DFA的模式匹配器的优化</h3><h4 id="3-9-6-最小化一个DFA的状态数"><a href="#3-9-6-最小化一个DFA的状态数" class="headerlink" title="3.9.6 最小化一个DFA的状态数"></a>3.9.6 最小化一个DFA的状态数</h4><p>我们总是希望使用的DFA的状态数量尽可能地少。</p>
 <p>只需要改变状态名字就可以将一个自动机转换成另一个自动机，我们就说这两个自动机是同构的。</p>
 <p><strong>任何正则语言都有一个唯一的（不计同构）状态数目最少的DFA。</strong></p>
 <p><strong>从任意一个接受相同语言的DFA出发，通过分组合并等价的状态，我们总是可以构建得到这个状态数最少的DFA。</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/78.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/78.webp" alt=""></p>
 <p><strong>算法：</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/79.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/79.webp" alt=""></p>
 <p>最小化一个DFA的状态数量，进行以下步骤：</p>
 <ul>
 <li>将DFA划分为Π，包含两组：接受状态组和非接受状态组</li>
@@ -477,64 +477,64 @@
 </li>
 </ul>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/80.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/80.webp" alt=""></p>
 <h3 id="补充：用程序实现DFA"><a href="#补充：用程序实现DFA" class="headerlink" title="补充：用程序实现DFA"></a>补充：用程序实现DFA</h3><p>示例1：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/201.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/201.webp" alt=""></p>
 <p>示例2：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/204.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/204.webp" alt=""></p>
 <p>用代码的位置来表示所处的状态，只能用于简单的情况，情况复杂时使用以下两种方法。注意：中括号[]的字符在程序中不要更新输入缓冲。</p>
 <h4 id="方法一-双层case的实现"><a href="#方法一-双层case的实现" class="headerlink" title="方法一 双层case的实现"></a>方法一 双层case的实现</h4><p>示例1：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/202.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/202.webp" alt=""></p>
 <p>示例2：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/203.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/203.webp" alt=""></p>
 <p>当终态还能接受字符时，通过改写DFA实现：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/205.png" alt=""></p>
-<h4 id="方法二-表驱动的实现"><a href="#方法二-表驱动的实现" class="headerlink" title="方法二 表驱动的实现"></a>方法二 表驱动的实现</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/206.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/205.webp" alt=""></p>
+<h4 id="方法二-表驱动的实现"><a href="#方法二-表驱动的实现" class="headerlink" title="方法二 表驱动的实现"></a>方法二 表驱动的实现</h4><p><img src="/2020/05/11/CompilerPrinciple/206.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/207.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/207.webp" alt=""></p>
 <p>表驱动方法的优缺点：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/208.png" alt="208"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/208.webp" alt="208"></p>
 <h2 id="第四章-语法分析"><a href="#第四章-语法分析" class="headerlink" title="第四章 语法分析"></a>第四章 语法分析</h2><h3 id="4-1-引论"><a href="#4-1-引论" class="headerlink" title="4.1 引论"></a>4.1 引论</h3><h4 id="4-1-1-语法分析器的作用"><a href="#4-1-1-语法分析器的作用" class="headerlink" title="4.1.1 语法分析器的作用"></a>4.1.1 语法分析器的作用</h4><p>语法分析器构造出一棵语法分析树，并把它传递给编译器的其他部分近一步处理。</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/18.png" alt=""></p>
-<h3 id="4-2-上下无关文法"><a href="#4-2-上下无关文法" class="headerlink" title="4.2 上下无关文法"></a>4.2 上下无关文法</h3><h4 id="4-2-1-上下无关文法的正式定义"><a href="#4-2-1-上下无关文法的正式定义" class="headerlink" title="4.2.1 上下无关文法的正式定义"></a>4.2.1 上下无关文法的正式定义</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/19.png" alt=""></p>
-<h4 id="4-2-3-推导"><a href="#4-2-3-推导" class="headerlink" title="4.2.3 推导"></a>4.2.3 推导</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/20.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/18.webp" alt=""></p>
+<h3 id="4-2-上下无关文法"><a href="#4-2-上下无关文法" class="headerlink" title="4.2 上下无关文法"></a>4.2 上下无关文法</h3><h4 id="4-2-1-上下无关文法的正式定义"><a href="#4-2-1-上下无关文法的正式定义" class="headerlink" title="4.2.1 上下无关文法的正式定义"></a>4.2.1 上下无关文法的正式定义</h4><p><img src="/2020/05/11/CompilerPrinciple/19.webp" alt=""></p>
+<h4 id="4-2-3-推导"><a href="#4-2-3-推导" class="headerlink" title="4.2.3 推导"></a>4.2.3 推导</h4><p><img src="/2020/05/11/CompilerPrinciple/20.webp" alt=""></p>
 <p>句型：可能包含终结符号又包含非终结符号，也可能是空串</p>
 <p>句子：不包含非终结符号的句型</p>
 <p>上下文无关语言：由文法生成的语言</p>
 <p>文法等价：两个文法生成相同语言</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/21.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/21.png" alt=""></p>
 <p>最右推导有时也称为规范推导。</p>
-<h4 id="4-2-4-语法分析树和推导"><a href="#4-2-4-语法分析树和推导" class="headerlink" title="4.2.4 语法分析树和推导"></a>4.2.4 语法分析树和推导</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/22.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/66.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/67.png" alt=""></p>
+<h4 id="4-2-4-语法分析树和推导"><a href="#4-2-4-语法分析树和推导" class="headerlink" title="4.2.4 语法分析树和推导"></a>4.2.4 语法分析树和推导</h4><p><img src="/2020/05/11/CompilerPrinciple/22.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/66.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/67.webp" alt=""></p>
 <p>语法分析树和最左推导/最右推导之间存在着一种一对一的关系。每一个语法分析树都和唯一的最左推导及最右推导相关联。（1对1+1）</p>
-<h4 id="4-2-5-二义性"><a href="#4-2-5-二义性" class="headerlink" title="4.2.5 二义性"></a>4.2.5 二义性</h4><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/23.png" alt=""></p>
+<h4 id="4-2-5-二义性"><a href="#4-2-5-二义性" class="headerlink" title="4.2.5 二义性"></a>4.2.5 二义性</h4><p><img src="/2020/05/11/CompilerPrinciple/23.png" alt=""></p>
 <p>即一个没有二义性的文法对一个句子只能有一个语法分析树、一个最左推导和一个最右推导。</p>
 <h4 id="4-2-7-上下文无关文法和正则表达式"><a href="#4-2-7-上下文无关文法和正则表达式" class="headerlink" title="4.2.7 上下文无关文法和正则表达式"></a>4.2.7 上下文无关文法和正则表达式</h4><p>文法是比正则表达式表达能力更强的表示方法。</p>
 <p>每个可以使用正则表达式描述的构造都可以使用文法来描述，但是反之不成立。</p>
 <h3 id="4-3-设计文法"><a href="#4-3-设计文法" class="headerlink" title="4.3 设计文法"></a>4.3 设计文法</h3><h4 id="4-3-1-词法分析和语法分析"><a href="#4-3-1-词法分析和语法分析" class="headerlink" title="4.3.1 词法分析和语法分析"></a>4.3.1 词法分析和语法分析</h4><p>正则表达式最适合描述诸如标识符、常量、关键字、空白等语言构造的结构。文法最适合描述嵌套结构，比如对称的括号对，匹配的begin-end，相互对应的if-then-else等。这些嵌套结构不能使用正则表达式描述。</p>
 <h4 id="4-3-2-消除二义性"><a href="#4-3-2-消除二义性" class="headerlink" title="4.3.2 消除二义性"></a>4.3.2 消除二义性</h4><p><strong>优先级</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/47.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/47.webp" alt=""></p>
 <p><strong>结合性</strong></p>
 <p>左递归表示了左结合性，右递归表示了右结合性。</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/48.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/48.webp" alt=""></p>
 <p><strong>悬挂else</strong></p>
 <p>采用就近匹配原则，有else就会和前面没有被匹配的if进行匹配</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/49.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/49.webp" alt=""></p>
 <h4 id="4-3-3-左递归的消除"><a href="#4-3-3-左递归的消除" class="headerlink" title="4.3.3 左递归的消除"></a>4.3.3 左递归的消除</h4><p>自顶向下语法分析方法不能处理左递归文法，因此使用将左递归转换为右递归来消除左递归</p>
 <ul>
 <li>立即（直接）左递归</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/24.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/24.png" alt=""></p>
 <ul>
 <li>没有环或者ε产生式的文法G（间接左递归）</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/25.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/25.webp" alt=""></p>
 <p>就是把每个非终结符的产生式右侧的【每个序号在这个非终结符前面的非终结符】用它（序号在前的那个非终结符）的产生式替换掉它</p>
 <h4 id="4-3-4-提取左公因子"><a href="#4-3-4-提取左公因子" class="headerlink" title="4.3.4 提取左公因子"></a>4.3.4 提取左公因子</h4><p>提取左公因子是一种文法转换方法，它可以产生适用于预测分析技术或自顶向下分析技术的文法。</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/26.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/26.webp" alt=""></p>
 <p>间接左因子常采用代入法：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/51.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/51.webp" alt=""></p>
 <h3 id="4-4-自顶向下的语法分析"><a href="#4-4-自顶向下的语法分析" class="headerlink" title="4.4 自顶向下的语法分析"></a>4.4 自顶向下的语法分析</h3><p>自顶向下语法分析可以被看作是输入串构造语法分析树的问题，它从语法分析树的根节点开始，按照先根次序（深度优先），创建这棵语法分析树的各个节点。自顶向下语法分析也可以被看作寻找输入串的最左推导的过程。</p>
 <p>自顶向下分析算法：</p>
 <ul>
@@ -547,21 +547,21 @@
 </ul>
 <h4 id="4-4-1-递归下降的语法分析"><a href="#4-4-1-递归下降的语法分析" class="headerlink" title="4.4.1 递归下降的语法分析"></a>4.4.1 递归下降的语法分析</h4><p><strong>递归下降分析</strong></p>
 <p>将一个非终结符的文法规则看作是识别A的一个过程的定义。</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/27.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/27.webp" alt=""></p>
 <p>就是说对文法中的每个非终结符都有一个（使用它的产生式右侧作为规则）识别它的程序，该程序中每个终结符都对应了match()函数进行输入匹配的检查；每个非终结符都对应了调用相应非终结符的程序；产生式中的选择对应程序代码中的case或者if结构。</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/28.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/28.webp" alt=""></p>
 <p>由于<strong>左递归</strong>会使得程序不停的递归下去，所以需要使用EBNF{ }对文法进行改写才能使用自顶向下的分析方法</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/29.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/29.webp" alt=""></p>
 <p>当有<strong>左因子</strong>时，通过EBNF[ ]改写文法</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/30.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/30.webp" alt=""></p>
 <p>使用EBNF后通过程序处理运算顺序</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/31.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/31.webp" alt=""></p>
 <p>在程序中构建语法树</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/32.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/33.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/32.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/33.webp" alt=""></p>
 <h4 id="4-4-2-FIRST和FOLLOW"><a href="#4-4-2-FIRST和FOLLOW" class="headerlink" title="4.4.2 FIRST和FOLLOW"></a>4.4.2 FIRST和FOLLOW</h4><p><strong>FIRST集</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/34.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/34.webp" alt=""></p>
 <p><strong>计算文法非终结符的First集算法：</strong></p>
 <ul>
 <li>将所有非终结符的First集置为空集</li>
@@ -572,11 +572,11 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/35.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/35.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/36.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/36.webp" alt=""></p>
 <p><strong>FOLLOW集</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/37.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/37.webp" alt=""></p>
 <p><strong>计算FOLLOW集算法：</strong></p>
 <ul>
 <li>开始符号的Follow集初始化为{$}，其他非终结符的Follow集置为空</li>
@@ -587,9 +587,9 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/38.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/38.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/39.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/39.webp" alt=""></p>
 <p><strong>注意：</strong></p>
 <ul>
 <li>First集中没有$，Follow集中没有ε。</li>
@@ -597,23 +597,23 @@
 </ul>
 <h4 id="4-4-3-LL-1-文法"><a href="#4-4-3-LL-1-文法" class="headerlink" title="4.4.3 LL(1)文法"></a>4.4.3 LL(1)文法</h4><p>判断一个串是否符合某LL(1)文法，通常使用LL(1)分析方法。LL(1)分析方法需要用到LL(1)分析表，而LL(1)分析表可以通过First集和Follow集构造。</p>
 <p><strong>LL(1)分析表</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/42.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/42.webp" alt=""></p>
 <p>分析表中横向为所有的非终结符，$表示串结束符；纵向为所有终结符。</p>
 <p><strong>简单文法的LL(1)分析表构造：</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/43.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/43.webp" alt=""></p>
 <p>即如果A不能推出空集，则只考虑第一条；如果可以推出空集，那么观察S$经若干步推导后非终结符A可以出现在终结符a<strong>（包括$）</strong>的前面，则将对应的A→α填入[A,a]中。</p>
 <p><strong>一般文法的LL(1)分析表构造（采用First和Follow集）：</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/45.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/45.webp" alt=""></p>
 <p>注意是观察First(α)</p>
 <p><strong>LL(1)文法</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/44.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/44.webp" alt=""></p>
 <p>等价于：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/46.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/46.webp" alt=""></p>
 <p>LL(1)文法不允许一个格子包含两条产生式（即二义性），可以在表格标注采用一条产生式来消除二义性，使得文法能用LL(1)方法进行分析。</p>
 <h4 id="4-4-4-非递归的预测分析"><a href="#4-4-4-非递归的预测分析" class="headerlink" title="4.4.4 非递归的预测分析"></a>4.4.4 非递归的预测分析</h4><p><strong>LL(1)分析</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/40.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/40.webp" alt=""></p>
 <p><strong>LL(1)分析过程</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/41.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/41.webp" alt=""></p>
 <p>通常利用LL(1)分析表进行分析</p>
 <ul>
 <li>accept</li>
@@ -624,10 +624,10 @@
 </ul>
 <p>LL(1)出错：栈顶与输入不匹配；串空栈不空。</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/50.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/50.webp" alt=""></p>
 <h3 id="4-5-自底向上的语法分析"><a href="#4-5-自底向上的语法分析" class="headerlink" title="4.5 自底向上的语法分析"></a>4.5 自底向上的语法分析</h3><p><strong>自底向上的分析方法</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/81.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/82.png" alt="82"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/81.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/82.webp" alt="82"></p>
 <p>自底向上分析的四个动作：</p>
 <ul>
 <li>移进shift</li>
@@ -635,23 +635,23 @@
 <li>接受accept</li>
 <li>报错error</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/83.png" alt="83"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/83.webp" alt="83"></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/84.png" alt="84"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/84.webp" alt="84"></p>
 <p><strong>句柄</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/85.png" alt="85"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/85.webp" alt="85"></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/86.png" alt="86"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/86.webp" alt="86"></p>
 <p>通过分析树找句柄：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/87.png" alt="87"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/87.webp" alt="87"></p>
 <p>用句柄来对句型进行归约：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/88.png" alt="88"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/88.webp" alt="88"></p>
 <p>归约过程就是依次找出分析树中的最左子树并去除叶子节点</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/89.png" alt="89"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/89.webp" alt="89"></p>
 <h3 id="4-6-LR语法分析技术介绍：简单LR技术"><a href="#4-6-LR语法分析技术介绍：简单LR技术" class="headerlink" title="4.6 LR语法分析技术介绍：简单LR技术"></a>4.6 LR语法分析技术介绍：简单LR技术</h3><p><strong>LR(0)项</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/90.png" alt="90"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/90.webp" alt="90"></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/91.png" alt="91"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/91.webp" alt="91"></p>
 <p>“.”表示当前分析时符号在栈还是在输入串的情况</p>
 <p>根据”.”位置的不同将LR(0)项分四类：</p>
 <ul>
@@ -660,19 +660,19 @@
 <li>移进项：”.”后面是终结符</li>
 <li>待归约项：”.”后面是非终结符</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/92.png" alt="92"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/92.webp" alt="92"></p>
 <p><strong>LR(0)项的有限自动机</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/93.png" alt="93"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/94.png" alt="94"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/93.webp" alt="93"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/94.webp" alt="94"></p>
 <p>同时，还要有.X→X.的Goto连接</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/95.png" alt="95"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/96.png" alt="96"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/95.png" alt="95"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/96.webp" alt="96"></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/97.png" alt="97"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/97.webp" alt="97"></p>
 <p>子集法构造DFA：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/98.png" alt="98"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/98.webp" alt="98"></p>
 <p>直接得到DFA：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/99.png" alt="99"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/99.webp" alt="99"></p>
 <p>总结</p>
 <p>由文法得到NFA的步骤：</p>
 <ul>
@@ -698,14 +698,14 @@
 </ul>
 <p>注意DFA中的状态需要指明包含的NFA状态（LR(0)项）</p>
 <p><strong>LR(0)分析算法</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/100.png" alt="100"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/101.png" alt="101"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/100.webp" alt="100"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/101.webp" alt="101"></p>
 <p>LR(0)文法不允许某个状态中同时包含移进项和归约项（移进-归约冲突），也不允许包含两个归约项（归约-归约冲突）。移进-移进并不会冲突，因为会先移进再根据移进的字符判断转向下一个状态。</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/102.png" alt="102"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/103.png" alt="103"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/104.png" alt="104"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/105.png" alt="105"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/102.webp" alt="102"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/103.webp" alt="103"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/104.webp" alt="104"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/105.webp" alt="105"></p>
 <p>总结</p>
 <p>用LR(0)方法分析一个串是否是某文法可识别的串，步骤为：</p>
 <ul>
@@ -742,12 +742,12 @@
 </li>
 </ul>
 <p><strong>SLR(1)分析算法</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/106.png" alt="106"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/107.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/108.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/106.webp" alt="106"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/107.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/108.webp" alt=""></p>
 <p>SLR(1)文法不允许某个状态中同时存在满足条件的移进项和归约项，也不允许同时存在满足条件的两个归约项。</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/109.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/109.webp" alt=""></p>
 <p>总结</p>
 <p>用LR(0)方法分析一个串是否是某文法可识别的串，步骤为：</p>
 <ul>
@@ -779,158 +779,158 @@
 <li>若在某一步移入的串与栈顶状态不匹配，不能得到新的栈顶状态，则报错</li>
 <li>若栈为$和初始状态+开始符号+某状态，输入串为空串和$，若在分析表中该状态和$对应的格子为accept，则代表该串为该文法可以识别的串</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/110.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/110.webp" alt=""></p>
 <p>练习：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/111.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/112.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/113.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/114.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/111.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/112.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/113.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/114.webp" alt=""></p>
 <h2 id="第五章-语法制导的翻译"><a href="#第五章-语法制导的翻译" class="headerlink" title="第五章 语法制导的翻译"></a>第五章 语法制导的翻译</h2><h3 id="5-1-语法制导定义"><a href="#5-1-语法制导定义" class="headerlink" title="5.1 语法制导定义"></a>5.1 语法制导定义</h3><p><strong>语法制导翻译</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/115.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/116.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/115.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/116.webp" alt=""></p>
 <p><strong>语法制导定义SDD</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/117.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/117.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/118.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/118.webp" alt=""></p>
 <p><strong>语法制导翻译方案SDT</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/119.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/119.webp" alt=""></p>
 <p>SDD与SDT</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/120.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/121.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/120.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/121.webp" alt=""></p>
 <p><strong>综合属性和继承属性</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/122.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/122.webp" alt=""></p>
 <p><strong>S属性的SDD</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/123.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/123.webp" alt=""></p>
 <p><strong>注释语法分析树</strong></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/124.png" alt=""></p>
-<h3 id="5-2-SDD的求值顺序"><a href="#5-2-SDD的求值顺序" class="headerlink" title="5.2 SDD的求值顺序"></a>5.2 SDD的求值顺序</h3><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/125.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/124.webp" alt=""></p>
+<h3 id="5-2-SDD的求值顺序"><a href="#5-2-SDD的求值顺序" class="headerlink" title="5.2 SDD的求值顺序"></a>5.2 SDD的求值顺序</h3><p><img src="/2020/05/11/CompilerPrinciple/125.webp" alt=""></p>
 <p><strong>依赖图</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/126.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/126.webp" alt=""></p>
 <p>通常综合属性在文法符合右边，继承属性在文法符合左边，操作对应于虚节点</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/127.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/127.webp" alt=""></p>
 <p><strong>拓扑排序</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/128.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/128.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/129.png" alt="129"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/129.webp" alt="129"></p>
 <p><strong>属性求值顺序</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/130.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/130.webp" alt=""></p>
 <p>S属性的SDD</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/131.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/131.webp" alt=""></p>
 <p>L属性的SDD</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/132.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/133.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/132.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/133.webp" alt=""></p>
 <p>注：不形成环路</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/134.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/134.webp" alt=""></p>
 <h3 id="5-3-语法制导翻译的应用"><a href="#5-3-语法制导翻译的应用" class="headerlink" title="5.3 语法制导翻译的应用"></a>5.3 语法制导翻译的应用</h3><ul>
 <li>抽象语法树的构造</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/136.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/137.png" alt="137"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/136.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/137.webp" alt="137"></p>
 <ul>
 <li>类型的结构</li>
 </ul>
-<h3 id="5-4-语法制导的翻译方案"><a href="#5-4-语法制导的翻译方案" class="headerlink" title="5.4 语法制导的翻译方案"></a>5.4 语法制导的翻译方案</h3><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/135.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/138.png" alt=""></p>
+<h3 id="5-4-语法制导的翻译方案"><a href="#5-4-语法制导的翻译方案" class="headerlink" title="5.4 语法制导的翻译方案"></a>5.4 语法制导的翻译方案</h3><p><img src="/2020/05/11/CompilerPrinciple/135.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/138.webp" alt=""></p>
 <p><strong>后缀翻译方案</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/139.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/139.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/140.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/141.png" alt="141"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/140.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/141.webp" alt="141"></p>
 <p><strong>产生式内部带有语义动作的SDT</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/142.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/142.webp" alt=""></p>
 <p>插入动作的语法分析树</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/143.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/143.webp" alt=""></p>
 <p><strong>将L-SDD转换为SDT</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/144.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/144.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/145.png" alt="145"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/145.webp" alt="145"></p>
 <p><strong>L属性定义的SDT实现</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/146.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/146.webp" alt=""></p>
 <p><strong>在递归下降语法分析过程中进行翻译</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/147.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/148.png" alt="148"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/147.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/148.webp" alt="148"></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/149.png" alt="149"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/150.png" alt="150"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/151.png" alt="151"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/152.png" alt="152"></p>
-<h2 id="第六章-中间代码生成"><a href="#第六章-中间代码生成" class="headerlink" title="第六章 中间代码生成"></a>第六章 中间代码生成</h2><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/153.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/154.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/155.png" alt=""></p>
-<h3 id="6-1-语法树的变体"><a href="#6-1-语法树的变体" class="headerlink" title="6.1 语法树的变体"></a>6.1 语法树的变体</h3><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/156.png" alt=""></p>
-<h3 id="6-2-三地址代码"><a href="#6-2-三地址代码" class="headerlink" title="6.2 三地址代码"></a>6.2 三地址代码</h3><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/157.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/149.webp" alt="149"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/150.webp" alt="150"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/151.webp" alt="151"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/152.webp" alt="152"></p>
+<h2 id="第六章-中间代码生成"><a href="#第六章-中间代码生成" class="headerlink" title="第六章 中间代码生成"></a>第六章 中间代码生成</h2><p><img src="/2020/05/11/CompilerPrinciple/153.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/154.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/155.webp" alt=""></p>
+<h3 id="6-1-语法树的变体"><a href="#6-1-语法树的变体" class="headerlink" title="6.1 语法树的变体"></a>6.1 语法树的变体</h3><p><img src="/2020/05/11/CompilerPrinciple/156.webp" alt=""></p>
+<h3 id="6-2-三地址代码"><a href="#6-2-三地址代码" class="headerlink" title="6.2 三地址代码"></a>6.2 三地址代码</h3><p><img src="/2020/05/11/CompilerPrinciple/157.webp" alt=""></p>
 <p>三地址代码中不能有双目以上的运算，也不允许出现组合运算（每条只能有一个运算）</p>
 <p><strong>常见三地址指令形式</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/158.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/159.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/158.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/159.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/160.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/160.webp" alt=""></p>
 <p>三地址代码是中间代码的一种抽象形式，具体实现包括四元式、 三元式和间接三元式。</p>
 <p><strong>四元式</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/161.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/162.png" alt="162"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/161.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/162.webp" alt="162"></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/163.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/163.png" alt=""></p>
 <p><strong>三元式</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/164.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/164.webp" alt=""></p>
 <p><strong>间接三元式</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/165.png" alt=""></p>
-<h3 id="6-3-类型和声明"><a href="#6-3-类型和声明" class="headerlink" title="6.3 类型和声明"></a>6.3 类型和声明</h3><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/166.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/165.webp" alt=""></p>
+<h3 id="6-3-类型和声明"><a href="#6-3-类型和声明" class="headerlink" title="6.3 类型和声明"></a>6.3 类型和声明</h3><p><img src="/2020/05/11/CompilerPrinciple/166.webp" alt=""></p>
 <p><strong>类型表达式</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/167.png" alt="167"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/168.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/167.webp" alt="167"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/168.webp" alt=""></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/169.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/169.webp" alt=""></p>
 <p><strong>类型等价</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/170.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/170.webp" alt=""></p>
 <p><strong>类型的声明</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/171.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/171.webp" alt=""></p>
 <p><strong>局部变量名的存储布局</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/172.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/173.png" alt="173"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/174.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/172.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/173.webp" alt="173"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/174.webp" alt=""></p>
 <p><strong>声明的序列</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/175.png" alt=""></p>
-<h3 id="6-4-表达式的翻译"><a href="#6-4-表达式的翻译" class="headerlink" title="6.4 表达式的翻译"></a>6.4 表达式的翻译</h3><p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/176.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/175.webp" alt=""></p>
+<h3 id="6-4-表达式的翻译"><a href="#6-4-表达式的翻译" class="headerlink" title="6.4 表达式的翻译"></a>6.4 表达式的翻译</h3><p><img src="/2020/05/11/CompilerPrinciple/176.webp" alt=""></p>
 <p><strong>表达式中的运算</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/177.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/177.webp" alt=""></p>
 <p>“||”是连接的作用</p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/178.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/178.webp" alt=""></p>
 <h3 id="6-5-类型检查"><a href="#6-5-类型检查" class="headerlink" title="6.5 类型检查"></a>6.5 类型检查</h3><p><strong>类型检查规则</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/179.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/179.webp" alt=""></p>
 <p><strong>类型转换</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/180.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/181.png" alt="181"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/180.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/181.webp" alt="181"></p>
 <p><strong>拓宽函数的适应</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/182.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/182.webp" alt=""></p>
 <h3 id="6-6-控制流"><a href="#6-6-控制流" class="headerlink" title="6.6 控制流"></a>6.6 控制流</h3><p><strong>布尔表达式</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/183.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/183.webp" alt=""></p>
 <p><strong>短路代码</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/184.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/184.webp" alt=""></p>
 <p><strong>控制流语句</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/185.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/185.webp" alt=""></p>
 <p><strong>控制流语句的代码布局方案</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/186.png" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/186.webp" alt=""></p>
 <p><strong>布尔表达式的控制流翻译</strong></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/187.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/188.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/189.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/190.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/191.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/192.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/193.png" alt="193"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/194.png" alt="194"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/187.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/188.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/189.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/190.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/191.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/192.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/193.webp" alt="193"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/194.webp" alt="194"></p>
 <p>示例：</p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/195.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/196.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/197.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/198.png" alt="198"></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/199.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Colin-Jay/Colin-Jay.github.io/master/2020/05/11/CompilerPrinciple/200.png" alt="200"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/195.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/196.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/197.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/198.webp" alt="198"></p>
+<p><img src="/2020/05/11/CompilerPrinciple/199.webp" alt=""></p>
+<p><img src="/2020/05/11/CompilerPrinciple/200.webp" alt="200"></p>
 
                 
                 <hr>
