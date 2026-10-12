@@ -57,7 +57,7 @@ def rewrite(content: str, prefix: str, is_html: bool) -> str:
     if is_html:
         def set_image_hints(match: re.Match[str]) -> str:
             tag = match.group(0)
-            if re.search(r"\\bloading\\s*=", tag, flags=re.IGNORECASE):
+            if re.search(r"\bloading\s*=", tag, flags=re.IGNORECASE):
                 return tag
             return tag[:4] + ' loading="lazy" decoding="async"' + tag[4:]
         content = IMAGE_TAG.sub(set_image_hints, content)
