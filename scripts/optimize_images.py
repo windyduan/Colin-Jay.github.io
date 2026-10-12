@@ -117,14 +117,14 @@ def process(path: Path) -> tuple[int, int, str | None]:
     return old_size, len(new_bytes), None
 
 
-def localize_raw_image_links(text: str) -> tuple[str, int]:
+def localize_raw_image_links(text: str, replacements: dict[str, str]) -> tuple[str, int]:
     count = 0
 
     def replace(match: re.Match[str]) -> str:
         nonlocal count
         original_path = match.group("path")
         # Do not modify third-party links if the image is not in this repo.
-        if (ROOT / original_path).is_file():
+        if (ROOT / original_path).is_file() or original_path in replacements:
             count += 1
             return "/" + original_path
         return match.group(0)
@@ -193,7 +193,7 @@ def main() -> int:
         if any(part in IGNORED for part in page.relative_to(ROOT).parts):
             continue
         original = page.read_text(encoding="utf-8")
-        rewritten, count_local = localize_raw_image_links(original)
+        rewritten, count_local = localize_raw_image_links(original, replacements)
         rewritten, count_updated = rewrite_png_urls(rewritten, page, replacements)
         if original != rewritten:
             page.write_text(rewritten, encoding="utf-8")
