@@ -19,6 +19,7 @@ ATTR_ROOT = re.compile(
     flags=re.IGNORECASE,
 )
 CSS_ROOT = re.compile(r'(?P<pre>\burl\(\s*)(?P<quote>["\']?)/(?!/)', re.IGNORECASE)
+IMAGE_TAG = re.compile(r"<img\b[^>]*>", re.IGNORECASE | re.DOTALL)
 SEARCH_ROOT = re.compile(
     r'(?P<pre>\bvar\s+path\s*=\s*)["\']/["\'](?P<tail>\s*\+\s*search_path\s*;)',
     re.IGNORECASE,
@@ -53,6 +54,13 @@ def rewrite(content: str, prefix: str, is_html: bool) -> str:
     # Rebase url('/img/foo') and url(/img/foo) in style attributes, inline
     # stylesheets, and external .css files. Protocol-relative //cdn stays intact.
     content = CSS_ROOT.sub(lambda match: match.group("pre") + match.group("quote") + prefix, content)
+    if is_html:
+        def set_image_hints(match: re.Match[str]) -> str:
+            tag = match.group(0)
+            if re.search(r"\bloading\s*=", tag, flags=re.IGNORECASE):
+                return tag
+            return tag[:4] + ' loading="lazy" decoding="async"' + tag[4:]
+        content = IMAGE_TAG.sub(set_image_hints, content)
     return content
 
 def verify_assets(root: Path) -> tuple[int, list[str]]:
